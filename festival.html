@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Festivals-DigiFest</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+        <link rel="shortcut icon" href="images/tab_icons/yui-peeking.jpg">
+    </head>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <body>
+    
+        <!-- Navagation Bar -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse">
+                    </button>
+                    <a class="navbar-brand" href="profile.php">DigiFest</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="profile.php">Home</a></li>
+                        <li class="active"><a href="festival.html">Festivals</a></li>
+
+                    </ul>
+                    
+                    <form class="nav navbar-form navbar-right">
+                        <button type="search" name="search" formmethod="post" formaction="search.php" class="btn btn-default">
+                                Search
+                            </button>
+                        <button type="submit" name="submit" formaction="logout.php" class="btn btn-primary">
+                                            Logout
+                                        </button>
+                        <input type="text" name="search" class="form-control col-lg-8" placeholder="Search For Festivals">
+                       
+                    </form>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav><!-- End Nav Bar -->
+
+        
+        <br>
+        <br>
+
+
+            <div class="bs-component" >
+                <div class="jumbotron" style="background-color:#d8755f">
+                    <h1 style="text-align:center;">
+                        Current Festivals
+                    </h1>
+                    <p style="text-align:center;">
+                        A way to attend a festival or concert without being there.
+                    </p>
+                
+                </div>
+            </div>
+
+
+            <br>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="well">
+                        <h3 style="text-align:center;"> Fill out the form below to add another festival to the database.</h3>
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <form action="register_festival.php" method="POST">
+                                    <div class="form-group">
+                                        <label for="festivalName" class="col-lg-4 control-label">
+                                            Name
+                                        </label>
+                                        <div class="col-lg-8">
+                                            <input type="text" class="form-control" id="festivalName" placeholder="Festival Name" name="festivalName">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="festivalDate" class="col-lg-4 control-label">
+                                            Start Date
+                                        </label>
+                                        <div class="col-lg-8">
+                                            <input type="text" class="form-control" id="festivalDate" placeholder="yyyy-mm-dd" name="festivalDate">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="col-lg-1 col-lg-offset-4">
+                                            <button type="submit" name="submit" formmethod="post" formaction="register_festival.php" class="btn btn-primary">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+
+            
+        
+        <hr>
+
+
+        <footer>
+            <div class="container">
+                <p style="text-align:center;">
+                    Author: Christopher Bell<br>
+                    Email: cbell7@xula.edu<br>
+                    Phone: 504-701-6315
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
